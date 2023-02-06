@@ -12,7 +12,7 @@ class Calculator {
         String[] strNum = string.split("\\s+[+\\-/*]\\s+", 2);//разбиваем на 2 части используя разделители[+\\-*/] и пробел(\\s+)
         String[] operatorArr = string.split("\\s+");//разбиваем строку если в ней содержится 1 или более раз пробел(\\s+)
         String operator = operatorArr[1];
-        if(operator.length() != 1) throw new Error("Некорректное число операторов: " +operatorArr[1]);
+        if(operator.length() != 1) throw new Error("Некорректный оператор: " +operatorArr[1]);
         if(strNum.length != 2) throw new Error("Некорректное число операндов");
 
         if (Arrays.asList(charAllowedArab).contains(strNum[0]) && Arrays.asList(charAllowedArab).contains(strNum[1])){
